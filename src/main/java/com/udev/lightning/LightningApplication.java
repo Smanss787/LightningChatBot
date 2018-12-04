@@ -1,4 +1,4 @@
-package com.udev.Lightning;
+package com.udev.lightning;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
