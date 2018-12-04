@@ -11,7 +11,7 @@
 <script src="/script.js"></script>
 </head>
 <body>
-	<h1>Simple chat</h1>
+	<h1>Lightning chatbox</h1>
 	<div class="chat_window">
 		<div class="top_menu">
 			<div class="buttons">
@@ -26,19 +26,19 @@
 			<div class="message_input_wrapper">
 				<input id="message_input_value" class="message_input" placeholder="Type your message here..." />
 			</div>
-			<div class="send_message">
+			<div onclick="sendMessage()" class="send_message">
 				<div class="icon"></div>
-				
+				<p>SEND</p>
 			</div>
 			
 			<button onclick="connect()">Connect to chat</button>
-			<button onclick="sendMessage()" class="text">Send</button>
-				<button onclick="disconnect()">Disconnect from chat</button>
+			<button onclick="disconnect()">Disconnect from chat</button>
 		</div>
 	</div>
 	<div id="message_template" class="message_template">
 		<li class="message"><div class="avatar"></div>
 			<div class="text_wrapper">
+				<div class="name"></div>
 				<div class="text"></div>
 			</div></li>
 	</div>
