@@ -1,24 +1,24 @@
 package com.udev.lightning.beans;
 
 public class User {
-	private int id;
+	private String login;
 	private String firstName;
 	private String lastName;
 	private String password;
 	
-	public User(int id, String firstName, String lastName, String password) {
-		this.id = id;
+	public User(String login, String firstName, String lastName, String password) {
+		this.login = login;
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.password = password;
 	}
 
-	public int getId() {
-		return id;
+	public String getLogin() {
+		return login;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setLogin(String login) {
+		this.login = login;
 	}
 
 	public String getFirstName() {

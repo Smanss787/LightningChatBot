@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Authentification</title>
+
+</head>
+<body>
+	<form th-action="@{/login}" th-object="${loginForm}" method="post">
+		<p th-if="${invalidCredentials}" class="error">Login/password Wrong</p>
+		<label for="username">Username</label>
+		<input type="text" id="username" name="username" autofocus="autofocus">Username</input>
+		
+		<label for="password">"password"</label>
+		<input type="text" id=""password"" name=""password"" autofocus="autofocus">"password"</input>
+		<br/>
+		<input type="submit" value="Log In"></input>
+	</form>
+</body>
+</html>

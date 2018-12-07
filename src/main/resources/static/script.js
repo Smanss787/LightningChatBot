@@ -1,5 +1,5 @@
-var $firstName ="Prenom";
-var $lastNAme = "Nom"
+var $firstName = ${loging};
+
 function getdate(){
 	var currentdate = new Date();
 	var datetime = currentdate.getDate() + "/"
