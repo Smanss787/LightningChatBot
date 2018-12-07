@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.tymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="/style.css" rel="stylesheet">
-<script src="/webjars/jquery/jquery.min.js"></script>
-<script src="/webjars/sockjs-client/sockjs.min.js"></script>
-<script src="/webjars/stomp-websocket/stomp.min.js"></script>
-<script src="/script.js"></script>
+	<meta charset="ISO-8859-1"></meta>
+	<title>Insert title here</title>
+	<link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet"></link>
+	<link href="/style.css" rel="stylesheet"></link>
+	<script src="/webjars/jquery/jquery.min.js"></script>
+	<script src="/webjars/sockjs-client/sockjs.min.js"></script>
+	<script src="/webjars/stomp-websocket/stomp.min.js"></script>
+	<script src="/script.js"></script>
 </head>
 <body>
 	<h1>Lightning chatbox</h1>
@@ -39,9 +39,8 @@
 		<li class="message"><div class="avatar"></div>
 			<div class="text_wrapper">
 				<span class="date"></span>
-				<div class="name"></div>
+				<div th:text="${user.login}"></div>
 				<div class="text"></div>
-				
 			</div></li>
 	</div>
 </body>

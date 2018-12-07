@@ -1,5 +1,3 @@
-var $firstName = ${loging};
-
 function getdate(){
 	var currentdate = new Date();
 	var datetime = currentdate.getDate() + "/"
@@ -31,7 +29,6 @@ function draw(side, text, firstName) {
     var $message;
     $message = $($('.message_template').clone().html());
     $message.addClass(side).find('.text').html(text);
-    $message.addClass(side).find('.name').html($firstName+" : ");
     $message.addClass(side).find('.date').html($date);
     $('.messages').append($message);
     return setTimeout(function () {
@@ -45,7 +42,6 @@ function disconnect(){
 function sendMessage(){
 	var $date = getdate();
 	stompClient.send("/app/message", {}, JSON.stringify({'message': $("#message_input_value").val(),
-														 'from' : $firstName,
 														 'date' : $date
 														 }));
 

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.tymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1"></meta>
+	<title>Authentification</title>
+</head>
+<body>
+	<form th:action="@{/login}" th:object="${user}" method="post">
+		<p th:if="${invalidCredentials}" class="error">Login/password Wrong</p>
+		<label for="login">Username</label>
+		<input type="text" id="login" name="login" autofocus="autofocus"/>
+		
+		<label for="password">password</label>
+		<input type="password" id="password" name="password" autofocus="autofocus"/>
+		<br/>
+		<input type="submit" value="Log In"></input>
+	</form>
+</body>
+</html>
